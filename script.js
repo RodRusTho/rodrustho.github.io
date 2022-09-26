@@ -13,19 +13,19 @@ const scene = new THREE.Scene()
 const objectsDistance = 4
 
 // Material
-const material = new THREE.MeshToonMaterial({ color: '#ffeded' })
+const material = new THREE.MeshToonMaterial({ color: '#738ADB' })
 
 // Meshes
 const mesh1 = new THREE.Mesh(
-    new THREE.TorusGeometry(1, 0.4, 16, 60),
+    new THREE.TorusKnotGeometry(1, 0.4, 16, 60),
     material
 )
 const mesh2 = new THREE.Mesh(
-    new THREE.ConeGeometry(1, 2, 32),
+    new THREE.SphereGeometry(1, 2, 32),
     material
 )
 const mesh3 = new THREE.Mesh(
-    new THREE.TorusKnotGeometry(0.8, 0.35, 100, 16),
+    new THREE.TorusGeometry(0.8, 0.35, 100, 16),
     material
 )
 
@@ -45,7 +45,7 @@ scene.add(mesh1, mesh2, mesh3)
  * Particles
  */
 // Geometry
-const particlesCount = 200
+const particlesCount = 2000
 const positions = new Float32Array(particlesCount * 3)
 
 for(let i = 0; i < particlesCount; i++)
@@ -60,7 +60,7 @@ particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 
 
 // Material
 const particlesMaterial = new THREE.PointsMaterial({
-    color: '#ffeded',
+    color: '#738ADB',
     sizeAttenuation: true,
     size: 0.03
 })
