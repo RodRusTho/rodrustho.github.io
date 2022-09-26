@@ -25,7 +25,7 @@ const mesh2 = new THREE.Mesh(
     material
 )
 const mesh3 = new THREE.Mesh(
-    new THREE.TorusKnotGeometry(0.8, 0.35, 100, 16),
+    new THREE.IcosahedronBufferGeometry(0.8, 0.35, 100, 16),
     material
 )
 
