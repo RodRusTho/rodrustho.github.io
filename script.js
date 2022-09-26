@@ -13,7 +13,7 @@ const scene = new THREE.Scene()
 const objectsDistance = 4
 
 // Material
-const material = new THREE.MeshToonMaterial({ color: '#FF0000' })
+const material = new THREE.MeshToonMaterial({ color: '#ffeded' })
 
 // Meshes
 const mesh1 = new THREE.Mesh(
@@ -25,7 +25,7 @@ const mesh2 = new THREE.Mesh(
     material
 )
 const mesh3 = new THREE.Mesh(
-    new THREE.IcosahedronBufferGeometry(0.8, 0.35, 100, 16),
+    new THREE.TorusKnotGeometry(0.8, 0.35, 100, 16),
     material
 )
 
@@ -60,7 +60,7 @@ particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 
 
 // Material
 const particlesMaterial = new THREE.PointsMaterial({
-    color: '#FF0000',
+    color: '#ffeded',
     sizeAttenuation: true,
     size: 0.03
 })
