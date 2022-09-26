@@ -13,7 +13,7 @@ const scene = new THREE.Scene()
 const objectsDistance = 4
 
 // Material
-const material = new THREE.MeshToonMaterial({ color: 'FF0000' })
+const material = new THREE.MeshToonMaterial({ color: '#FF0000' })
 
 // Meshes
 const mesh1 = new THREE.Mesh(
@@ -60,7 +60,7 @@ particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 
 
 // Material
 const particlesMaterial = new THREE.PointsMaterial({
-    color: 'FF0000',
+    color: '#FF0000',
     sizeAttenuation: true,
     size: 0.03
 })
